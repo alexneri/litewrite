@@ -7,23 +7,7 @@
       "scripts": [
         "background.js",
         "litewrite.js",
-        "gruntfile.js",
-        "lib/almond.js",
-        "lib/backbone.js",
-        "lib/backbone.localstorage.js",
-        "lib/backbone.remoteStorage-documents.js",
-        "lib/jquery.autosize.js",
-        "lib/jquery.js",
-        "lib/matchMedia.js",
-        "lib/moment.js",
-        "lib/remotestorage.js",
-        "lib/remotestorage-documents.js",
-        "lib/requestAnimationFrame.js",
-        "lib/require.i18n.js",
-        "lib/require.js",
-        "lib/require.text.js",
-        "lib/snap.js",
-        "lib/underscore.js"
+        "javascripts/main.js"
         ]
     }
   },
