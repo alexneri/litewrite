@@ -1,43 +1,185 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-	<title>Litewrite</title>
-	<meta name="description" content="distraction-free writing">
+    <title>Litewrite Chrome App by alexneri</title>
+  </head>
 
-	<link rel="stylesheet" href="style/litewrite.css">
-	<link rel="shortcut icon" href="img/litewrite.png">
-	<link rel="apple-touch-icon-precomposed" href="img/litewrite-touch.png">
-</head>
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Litewrite Chrome App</h1>
+        <h2>Distraction-free writing on your Chrome Desktop</h2>
+        <a href="https://github.com/alexneri/litewrite" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
 
-<body>
-	<div id="snap-content" class="scrollbox">
-		<svg id="menu-button" height="15" width="15">
-			<path d="m0 0v3h15v-3h-15zm0 6v3h15v-3h-15zm0 6v3h15v-3h-15z"/>
-		</svg>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="litewrite-chrome-app" class="anchor" href="#litewrite-chrome-app"><span class="octicon octicon-link"></span></a>[Litewrite Chrome App]</h1>
 
-		<div id="remotestorage-connect"></div>
-    <textarea id="editor"></textarea>
-		<div id="date"></div>
-    <a id="share" target="_blank" class="share-hide">
-      <button class="share"></button>
-    </a>
-	</div>
+<p><strong>unobtrusive writing</strong> ported as a Chrome native app by <a href="http://alexneri.co">Alex Neri</a></p>
 
-  <aside>
-    <input type="search" id="search" class="hide">
-    <div id="add">+</div>
-    <ul id="entries" class="scrollbox"></ul>
+<p>Seeing as this is an app that wonderfully does its job as a writing tool, I believe that it can be used as a native desktop app, though the use of the <a href="https://developer.chrome.com/apps/about_apps">Chrome App framework</a>. It's a small project that I plan to work on little by little, so there's no release date yet ^^;</p>
 
-    <footer>
-      <a href="http://github.com/litewrite/litewrite" target="_blank">open source</a>
-    </footer>
-  </aside>
+<p>This project is a work built on the code made by the cool guys below.</p>
 
-	<script src="lib/require.js" data-main="src/config"></script>
-</body>
+<h1>
+<a name="what-is-litewrite-" class="anchor" href="#what-is-litewrite-"><span class="octicon octicon-link"></span></a>What is <a href="http://litewrite.net">Litewrite</a> ?</h1>
 
+<p><strong>unobtrusive writing</strong> by <a href="http://jancborchardt.net">Jan-Christoph Borchardt</a> &amp; <a href="http://jorin-vogel.com">Jorin Vogel</a></p>
+
+<p>Litewrite was built out of a need to have a simple way of taking notes, having them everywhere, working on any device, regardless if on- or offline.</p>
+
+<ul>
+<li>simple design</li>
+<li>available everywhere (device compatibility + synced data)</li>
+<li>works offline</li>
+</ul><p>No current solution provides that. It's quite strange that something as benign as jotting down text isn't really solved unless you buy into one specific »ecosystem«. Either the design is complicated, or they only work on Apple hardware, or they are tied to Dropbox, or you can't do anything if you don't have wifi, or or or …</p>
+
+<p>So we built Litewrite</p>
+
+<ul>
+<li>simple design: There are lots of other self-titled distraction-free editors which offer music, themes, different typefaces, etc etc. We don't, because we think that's unnecessary. If you want music you can listen to it using your favorite music player, if you want to change the font size you can zoom using your browser, …</li>
+<li>device compatibility: It’s a web app which works on all devices and operating systems.</li>
+<li>synced data: Notes are available everywhere, using the open remoteStorage standard. Compatibility with Dropbox, Google Drive, ownCloud, etc.</li>
+<li>offline: Once loaded, it’s essentially a desktop app. Thanks to AppCache and localStorage, both app and data are fully cached offline and synced whenever online.</li>
+</ul><p>Now of course it's far from perfect, but we and lots of others use it day-to-day. And that's also why we made it open source If you experience any problems or have suggestions, please let us know at <a href="http://github.com/litewrite/litewrite/issues">http://github.com/litewrite/litewrite/issues</a>
+And if you know a little about web development you're welcome to dive into the code at <a href="http://github.com/litewrite/litewrite">http://github.com/litewrite/litewrite</a></p>
+
+<p>Cheers,
+Jorin &amp; Jan-Christoph</p>
+
+<h2>
+<a name="contribute" class="anchor" href="#contribute"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Play with the <a href="http://litewrite.github.com/litewrite">development version</a>, check out <a href="http://github.com/litewrite/litewrite/issues">issues</a> and dive into the code if you like. Set up your development environment:</p>
+
+<ol>
+<li>git clone <a href="http://github.com/litewrite/litewrite">http://github.com/litewrite/litewrite</a>
+</li>
+<li>Install <a href="http://nodejs.org/#download">node.js</a>
+</li>
+<li>Install grunt gobally via (<code>sudo</code>)<code>npm install -g grunt-cli</code>
+</li>
+<li>Run <code>npm install</code> to install the development dependencies</li>
+<li>
+<code>grunt</code> to start a web server at <a href="http://localhost:8000">http://localhost:8000</a>
+</li>
+</ol><h3>
+<a name="building-the-production-version" class="anchor" href="#building-the-production-version"><span class="octicon octicon-link"></span></a>Building the production version</h3>
+
+<p>Run <code>grunt build</code>. But keep attention because it overwrites the existing files.</p>
+
+<h2>
+<a name="thanks" class="anchor" href="#thanks"><span class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>Inspired by <a href="http://iawriter.com">iA Writer</a> &amp; <a href="http://gun.io/w">LightWrite</a>. Initial prototype built on <a href="http://nv.github.com/notes">Notes</a>. <a href="http://www.huertatipografica.com.ar/tipografias/alegreya/ejemplos.html">Alegreya</a> typeface by Juan Pablo del Peral</p>
+
+<h2>
+<a name="remotestorage" class="anchor" href="#remotestorage"><span class="octicon octicon-link"></span></a>Remotestorage</h2>
+
+<p>This is an <a href="http://unhosted.org">unhosted web app</a>, meaning its code is fully client-side, without any server backend you need to trust! It also supports the open <a href="http://remotestorage.io">remotestorage</a> protocol so you can sync your data across devices &amp; browsers.</p>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (c) 2012 <a href="http://jancborchardt.net">Jan-Christoph Borchardt</a> &amp; <a href="http://jorin-vogel.com">Jorin Vogel</a>, licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">Affero General Public License</a> version 3 or later. See license.txt for the full license text. Short: <strong>Do anything you want as long as you credit us and redistribute your changes under the same conditions.</strong></p>
+
+<h2>
+<a name="litewrite" class="anchor" href="#litewrite"><span class="octicon octicon-link"></span></a><a href="http://litewrite.net">Litewrite</a>
+</h2>
+
+<p><strong>unobtrusive writing</strong> by <a href="http://jancborchardt.net">Jan-Christoph Borchardt</a> &amp; <a href="http://jorin-vogel.com">Jorin Vogel</a></p>
+
+<p>Litewrite was built out of a need to have a simple way of taking notes, having them everywhere, working on any device, regardless if on- or offline.</p>
+
+<ul>
+<li>simple design</li>
+<li>available everywhere (device compatibility + synced data)</li>
+<li>works offline</li>
+</ul><p>No current solution provides that. It's quite strange that something as benign as jotting down text isn't really solved unless you buy into one specific »ecosystem«. Either the design is complicated, or they only work on Apple hardware, or they are tied to Dropbox, or you can't do anything if you don't have wifi, or or or …</p>
+
+<p>So we built Litewrite</p>
+
+<ul>
+<li>simple design: There are lots of other self-titled distraction-free editors which offer music, themes, different typefaces, etc etc. We don't, because we think that's unnecessary. If you want music you can listen to it using your favorite music player, if you want to change the font size you can zoom using your browser, …</li>
+<li>device compatibility: It’s a web app which works on all devices and operating systems.</li>
+<li>synced data: Notes are available everywhere, using the open remoteStorage standard. Compatibility with Dropbox, Google Drive, ownCloud, etc.</li>
+<li>offline: Once loaded, it’s essentially a desktop app. Thanks to AppCache and localStorage, both app and data are fully cached offline and synced whenever online.</li>
+</ul><p>Now of course it's far from perfect, but we and lots of others use it day-to-day. And that's also why we made it open source If you experience any problems or have suggestions, please let us know at <a href="http://github.com/litewrite/litewrite/issues">http://github.com/litewrite/litewrite/issues</a>
+And if you know a little about web development you're welcome to dive into the code at <a href="http://github.com/litewrite/litewrite">http://github.com/litewrite/litewrite</a></p>
+
+<p>Cheers,
+Jorin &amp; Jan-Christoph</p>
+
+<h2>
+<a name="contribute-1" class="anchor" href="#contribute-1"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>Play with the <a href="http://litewrite.github.com/litewrite">development version</a>, check out <a href="http://github.com/litewrite/litewrite/issues">issues</a> and dive into the code if you like. Set up your development environment:</p>
+
+<ol>
+<li>git clone <a href="http://github.com/litewrite/litewrite">http://github.com/litewrite/litewrite</a>
+</li>
+<li>Install <a href="http://nodejs.org/#download">node.js</a>
+</li>
+<li>Install grunt gobally via (<code>sudo</code>)<code>npm install -g grunt-cli</code>
+</li>
+<li>Run <code>npm install</code> to install the development dependencies</li>
+<li>
+<code>grunt</code> to start a web server at <a href="http://localhost:8000">http://localhost:8000</a>
+</li>
+</ol><h3>
+<a name="building-the-production-version-1" class="anchor" href="#building-the-production-version-1"><span class="octicon octicon-link"></span></a>Building the production version</h3>
+
+<p>Run <code>grunt build</code>. But keep attention because it overwrites the existing files.</p>
+
+<h2>
+<a name="thanks-1" class="anchor" href="#thanks-1"><span class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>Inspired by <a href="http://iawriter.com">iA Writer</a> &amp; <a href="http://gun.io/w">LightWrite</a>. Initial prototype built on <a href="http://nv.github.com/notes">Notes</a>. <a href="http://www.huertatipografica.com.ar/tipografias/alegreya/ejemplos.html">Alegreya</a> typeface by Juan Pablo del Peral</p>
+
+<h2>
+<a name="remotestorage-1" class="anchor" href="#remotestorage-1"><span class="octicon octicon-link"></span></a>Remotestorage</h2>
+
+<p>This is an <a href="http://unhosted.org">unhosted web app</a>, meaning its code is fully client-side, without any server backend you need to trust! It also supports the open <a href="http://remotestorage.io">remotestorage</a> protocol so you can sync your data across devices &amp; browsers.</p>
+
+<h2>
+<a name="license-1" class="anchor" href="#license-1"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Copyright (c) 2012 <a href="http://jancborchardt.net">Jan-Christoph Borchardt</a> &amp; <a href="http://jorin-vogel.com">Jorin Vogel</a>, licensed under the <a href="https://www.gnu.org/licenses/agpl-3.0.html">Affero General Public License</a> version 3 or later. See license.txt for the full license text. Short: <strong>Do anything you want as long as you credit us and redistribute your changes under the same conditions.</strong></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/alexneri/litewrite/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/alexneri/litewrite/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/alexneri/litewrite"></a> is maintained by <a href="https://github.com/alexneri">alexneri</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
 </html>
